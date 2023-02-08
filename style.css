@@ -1,0 +1,169 @@
+/* css reset */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=PT+Serif&family=Poppins&family=Space+Mono&display=swap');
+
+:root{
+  --font-pri: 'PT Serif', serif;
+  --font-sec: 'Poppins',sans-serif;
+}
+
+
+/* css reset */
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+ 
+.container{
+  max-width: 990px;
+  /* border: 2px solid green; */
+  min-height: 100%;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title{
+  flex: 50%;
+  flex-grow: 2;
+  /* border: 2px solid rebeccapurple; */
+}
+.title h2{
+  font-family: var(--font-pri);
+  font-weight: 700;
+  letter-spacing: -4.5%;
+  font-size: 2.5rem;
+}
+.discp{
+    flex: 35%;
+    /* border: 2px solid rgb(8, 0, 122); */
+}
+.discp p{
+    width: 400px;
+    font-family: var(--font-sec);
+    font-size: 18px;
+}
+.discp h3 {
+  font-family: var(--font-sec);
+  font-weight: 600;
+}
+/* Gallery */
+
+.gallery{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4rem;
+  margin: 4rem auto;
+  justify-content: space-between;
+}
+
+.image{
+  width: 270px;
+  position: relative;
+}
+.image h3{
+  transform: rotate(90deg);
+  position: absolute;
+  margin-top: -1rem;
+  margin-left: 10rem;
+  height: 10rem;
+  width: 7.5rem;
+  font-family: var(--font-pri);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.image h2{
+  font-family: var(--font-sec);
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.tagline{
+  text-align: center;
+  padding: 1rem;
+  color:#A9A9A9;
+}
+.tagline span{
+ color: #707070;
+}
+
+
+
+@media screen and (min-width: 601px){
+    .down{
+    margin-top: 4.5rem;
+  }
+}
+
+/* for small devices */
+
+@media screen and (max-width: 600px){
+  
+  .container{
+    margin: 2rem .5rem;
+    width: auto;
+  }
+
+  .title h2{
+    font-size: 2.1rem;
+  }
+  .discp{
+    margin-top: 1.5rem;
+  }
+  .discp p{
+    /* width: 327px; */
+    font-family: var(--font-sec);
+    font-size: 17px;
+    margin-top: .3rem;
+  }
+
+  .gallery{
+    margin: 3rem auto ;
+    gap: 2.3rem;
+    justify-content: center;
+  }
+
+  .image{
+    width: 145px;
+  }
+  .image h3{
+    margin-left: 1.6rem;
+  }
+  .image h2{
+    font-size: 17px;
+    margin-top: 10px;
+  }
+  .mb{
+    margin-top: 3rem;
+  }
+}
